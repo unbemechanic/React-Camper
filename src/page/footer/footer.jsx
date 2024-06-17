@@ -1,5 +1,6 @@
 import React from 'react'
 import { DirectH, FooterH, FooterStyle, Header, IndentedDiv } from '../../style'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -8,7 +9,9 @@ const Footer = () => {
             <FooterStyle>
                     <DirectH $footer>Camper</DirectH>
                 <FooterH>
+                    <Link to="/motor">
                     <div>Services</div>
+                    </Link>
                     <div>Camping</div>
                     <div>Lodging</div>
                     <div>Harbor</div>

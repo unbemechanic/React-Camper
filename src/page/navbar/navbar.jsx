@@ -1,21 +1,31 @@
 import React from 'react'
-import { DirectContainer, DirectH, Header, IndentedDiv } from '../../style'
+import { DirectContainer, DirectH, Header, IndentedDiv, MenuButton } from '../../style'
+import SwipeableTemporaryDrawer from '../../materials/navbarMenu'
+import { Link } from 'react-router-dom'
+
+
 
 
 const Navbar = () => {
   return (
-    <div>
+    <div style={{
+        backgroundColor: 'white', position:'fixed', width:'100%', zIndex:'999'
+    }}>
         <IndentedDiv>
             <Header>
                 <DirectH $name>Camper</DirectH>
                 <DirectContainer>
-                    <DirectH>Motor</DirectH>
+                    <Link>
+                    <DirectH>Motor<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="gray"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></DirectH>
+                    </Link>
                     
-                    <DirectH>Caravan</DirectH>
-                    <DirectH>Tuning</DirectH>
-                    <DirectH>Used Car</DirectH>
-                    <DirectH>Camping Place</DirectH>
+                    <DirectH>Caravan<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="gray"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></DirectH>
+                    <DirectH>Tuning<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="gray"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></DirectH>
+                    <DirectH>Used Car<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="gray"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></DirectH>
+                    <DirectH>Camping Place<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="gray"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></DirectH>
                 </DirectContainer>
+                <SwipeableTemporaryDrawer/>
+
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
                     <path d="M10.125 24C11.1605 24 12 23.1605 12 22.125C12 21.0895 11.1605 20.25 10.125 20.25C9.08947 20.25 8.25 21.0895 8.25 22.125C8.25 23.1605 9.08947 24 10.125 24Z" fill="#006DAB"/>
@@ -25,6 +35,7 @@ const Navbar = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27" fill="none">
                     <path d="M9.2041 7.3125C9.2041 10.1036 11.4755 12.375 14.2666 12.375C17.0577 12.375 19.3291 10.1036 19.3291 7.3125C19.3291 4.52137 17.0577 2.25 14.2666 2.25C11.4755 2.25 9.2041 4.52137 9.2041 7.3125ZM23.2666 23.625H24.3916V22.5C24.3916 18.1586 20.858 14.625 16.5166 14.625H12.0166C7.6741 14.625 4.1416 18.1586 4.1416 22.5V23.625H23.2666Z" fill="#006DAB"/>
                     </svg>
+                    
                     <label for="lang">
                         <select id="lang" name='lang'>
                             <option value="English">En</option>
@@ -33,6 +44,7 @@ const Navbar = () => {
                         </select>
                     </label>
                 </div>
+                
             </Header>
             
 
