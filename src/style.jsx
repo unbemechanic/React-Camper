@@ -6,6 +6,7 @@ import Compare3 from '..//src/assets/compare-3.png'
 import { startTransition } from "react";
 import Meny from '..//src/assets/menuButton.svg'
 import MenuIcon from '@mui/icons-material/Menu';
+import SignIcons from '..//src/assets/signIcon.png'
 
 export const IndentedDiv = styled.div`
     width: 90%;
@@ -16,6 +17,98 @@ export const IndentedDiv = styled.div`
     
     
 `
+export const SignBackground = styled.div`
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: #130e0e7e;
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    flex-direction: column;
+
+`
+export const SignContainer = styled.div`
+    background-color: #fff;
+    height: 517px;
+    width: 450px;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    color: rgba(55, 55, 55, 0.80);
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    h2{
+        margin-bottom: 20px;
+        color: #373737;
+    }
+    div{
+        margin-bottom: 5px;
+    }
+`
+export const SignInnerDiv = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: ${(props)=>props.$icons ? `url(${SignIcons})` :''};
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 30px;
+    :last-child{
+        margin-left: auto;
+    }
+`
+export const SignOr = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    margin: 20px;
+`
+export const LongDash = styled.div`
+    height: 1px;
+    width: 130px;
+    background: rgba(55, 55, 55, 0.15);
+
+`
+export const SocialIcons = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+
+`
+export const SocialIcon = styled.div`
+    height: 40px;
+        width: 40px;
+        background-color: ${(props)=>props.$n ? '#039600': (props)=>props.$g ? '#BC0000':'#FFC700'};
+        border-radius: 50%;
+        font-size: 25px;
+        font-weight: 900;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+`
+
+export const SignTypography = styled.div`
+    color: rgba(55, 55, 55, 0.80);
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+`
+
 export const MotorBodyContainer = styled.div`
     margin: 0 auto;
     display: flex;
@@ -360,6 +453,7 @@ export const SelectSec = styled.div`
             border: none;
             background-color: inherit;
             padding-left: 10px;
+            height: 100;
         }
         svg{
         border-left: 2px solid rgba(55, 55, 55, 0.403);

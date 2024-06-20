@@ -7,8 +7,8 @@ const RoutesComponent = () => {
   return (
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<MotorComponent/>}/>
-            <Route path="/motor/:id" element={<DocumentsComponent/>} />
+            <Route path="/motor" element={<MotorComponent/>}/>
+            
         </Routes>
     </BrowserRouter>
   )
